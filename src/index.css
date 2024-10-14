@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+
+  background-position: center right;
+  background-size: cover;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(60, 60, 60, 0.6),
+      rgba(0, 0, 0, 0.3)
+    )
+    fill 1;
+}
+#FED7AA @media (max-width: 440px) {
+  .bg-image {
+    background-position-x: 70%;
+  }
+}
+.main-heading {
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 32px;
+  text-align: left;
+}
+.sub-heading {
+  @apply text-sm mb-4;
+}
+@media (min-width: 600px) {
+  .main-heading {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    text-align: left;
+  }
+  .sub-heading {
+    @apply text-base;
+  }
+}
+@media (min-width: 900px) {
+  .main-heading {
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 66px;
+    text-align: left;
+  }
+  .sub-heading {
+    @apply text-xl mb-6;
+  }
+}
