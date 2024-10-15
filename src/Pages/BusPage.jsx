@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
+import Footer from "../Components/Footer";
 import Nav from "../Components/Nav";
-
+import VehicleList from "../Components/VehicleList";
 export default function BusPage() {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    fetch("http://localhost:3000/")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
-  }, []);
   return (
-    <div>
+    <div className="bg-gradient-to-b from-orange-100 to-white">
       <Nav />
-      Bus
-      <p>{data?.name}</p>
+      <VehicleList />
+      <hr className="border-gray-400 mx-3 my-4" />
+      <Footer typ="bus" />
     </div>
   );
 }

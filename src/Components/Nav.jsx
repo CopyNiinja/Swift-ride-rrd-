@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 export default function Nav() {
   return (
     <div className=" p-2  sm:px-5 md:px-8 lg:px-10 lg:pr-16 bg-orange-100 flex justify-between">

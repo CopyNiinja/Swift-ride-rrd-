@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import AboutPage from "./Pages/AboutPage";
+import BusDetails from "./Pages/BusDetails";
 import BusPage from "./Pages/BusPage";
 
 import HomePage from "./Pages/HomePage";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/bus" element={<BusPage />} />
+          <Route path="/bus/:id" element={<BusDetails />} />
           <Route path="/micro" element={<MicroPage />} />
         </Routes>
       </BrowserRouter>
