@@ -15,7 +15,7 @@ export default function VehicleList() {
       <h1 className="text-gray-700 my-4 mt-10 font-bold text-base md:text-xl mx-3 md:mx-10  ">
         Discover Our Premium Buses:
       </h1>
-      <div className="grid grid-cols-1 mx-3 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:mx-10 ">
+      <div className="grid grid-cols-1 mx-3  rounded-sm sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:mx-10 ">
         {data.map((obj) => (
           <Vehicle key={obj.id} data={obj} />
         ))}
