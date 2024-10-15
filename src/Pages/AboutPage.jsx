@@ -4,7 +4,7 @@ import Nav from "../Components/Nav";
 
 export default function AboutPage() {
   return (
-    <div className=" flex flex-col">
+    <div className="h-dvh flex flex-col">
       <Nav />
       <About />
       <Footer />
