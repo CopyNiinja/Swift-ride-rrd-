@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 export default function Footer({ typ }) {
   return (
-    <div className={typ == "bus" ? "bg-white" : "bg-orange-100"}>
+    <div className={typ == "bus" ? "bg-white " : "bg-orange-100 "}>
       <div className=" text-xs    lg-text-base">
         <div className="  flex  justify-evenly gap-6 sm:gap-16 text-black pt-4   mx-4">
           <div>
