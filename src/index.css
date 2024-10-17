@@ -21,9 +21,9 @@
   }
 }
 .main-heading {
-  font-family: Inter;
+  font-family: Caveat;
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 32px;
   text-align: left;
 }
@@ -32,10 +32,10 @@
 }
 @media (min-width: 600px) {
   .main-heading {
-    font-family: Inter;
+    font-family: Caveat;
     font-size: 36px;
     font-weight: 800;
-    line-height: 42px;
+    line-height: 52px;
     text-align: left;
   }
   .sub-heading {
@@ -44,8 +44,8 @@
 }
 @media (min-width: 900px) {
   .main-heading {
-    font-family: Inter;
-    font-size: 48px;
+    font-family: Caveat;
+    font-size: 58px;
     font-weight: 800;
     line-height: 66px;
     text-align: left;

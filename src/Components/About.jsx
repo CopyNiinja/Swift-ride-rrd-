@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img from "../assets/bus.jpg";
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
       <img src={img} alt="" className="h-40 sm:h-60 md:h-72 w-full  " />
       <div className="flex flex-col gap-4 m-4  lg:mx-16 lg:gap-6">
         <div>
-          <h1 className="text-base md:text-lg lg:text-xl text-[#7f5539] font-bold">
+          <h1 className="text-lg font-hello  md:text-3xl lg:text-4xl text-[#7f5539] font-bold">
             Welcome to SwiftRide, your premier choice for convenient and
             reliable transportation services.
           </h1>
@@ -26,11 +27,13 @@ export default function About() {
           </p>
         </div>
         <div>
-          <div className="bg-[#955B43]  lg:text-base rounded-md my-2 py-5 px-2 text-xs md:text-sm text-white ">
+          <div className="bg-[#955B43]  max-w-fit lg:text-base rounded-md my-2 py-5 px-2 text-xs md:text-sm text-white ">
             Your Journey is yet to begin.lets see if you like our vehicles.
-            <button className="bg-zinc-900 block text-white px-3 py-2 mt-2 rounded-md ">
-              Explore Our Vehicles
-            </button>
+            <Link to="/bus">
+              <button className="bg-zinc-900 block text-white px-3 py-2 mt-2 rounded-md ">
+                Explore Our Vehicles
+              </button>
+            </Link>
           </div>
         </div>
       </div>

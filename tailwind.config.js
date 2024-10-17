@@ -11,7 +11,8 @@ export default {
     },
     extend: {},
     fontFamily:{
-      sans:["Poppins"]
+      sans:["Poppins"],
+      hello:["Caveat"]
     }
   
   },
