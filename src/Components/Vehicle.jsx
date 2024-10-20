@@ -7,7 +7,7 @@ export default function Vehicle({
   const { imageUrl, name, price, type, id } = data;
   return (
     <Link to={`/bus/${id}`} state={data}>
-      <div className="col-span-1 relative  text-sm rounded-md group duration-300 hover:rounded-md hover:border-2 hover:p-3 hover:bg-blend-luminosity">
+      <div className="col-span-1 relative  text-sm rounded-md group duration-300 hover:rounded-md hover:border-2 hover:p-3 ">
         <img
           src={imageUrl}
           alt={name}
