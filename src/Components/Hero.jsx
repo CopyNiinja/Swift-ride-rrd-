@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <button className="sub-heading rounded-sm border-2 px-4 py-2 tracking-widest font-bold border-orange-100 text-orange-50 backdrop-blur-sm hover:bg-orange-100   hover:text-gray-600 hover:-translate-y-0.5 hover:duration-300">
             <p className="font-hello">
-              <Link to="/bus">Take Our Ride</Link>
+              <Link to="bus">Take Our Ride</Link>
             </p>
           </button>
         </div>

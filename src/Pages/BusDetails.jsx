@@ -8,7 +8,7 @@ export default function BusDetails() {
     <div className="min-h-dvh flex flex-col bg-orange-100">
       <div className="flex-1 flex  flex-col pt-6 bg-orange-100  gap-4 px-4 sm:px-8 md:px-8 md:flex-row lg:px-20 ">
         <div>
-          <Link to="/bus">
+          <Link to=".." relative="path">
             <div className="ml-2 text-sm md:text-base mb-1 w-fit text-gray-800 italic hover:text-red-900 transition-all duration-1000 hover:scale-x-110 hover:-ml-1  ">
               {"<<"}Back
             </div>

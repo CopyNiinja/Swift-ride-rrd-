@@ -13,7 +13,7 @@ export default function LayoutHost() {
                 viewTransitionName: isTransitioning ? "slide" : "",
               };
             }}
-            to="/host"
+            to="."
           >
             Dashboard
           </NavLink>
@@ -28,7 +28,7 @@ export default function LayoutHost() {
                 viewTransitionName: isTransitioning ? "slide" : "",
               };
             }}
-            to="/host/income"
+            to="income"
           >
             Income
           </NavLink>
@@ -43,7 +43,7 @@ export default function LayoutHost() {
                 viewTransitionName: isTransitioning ? "slide" : "",
               };
             }}
-            to="/host/reviews"
+            to="reviews"
           >
             Reviews
           </NavLink>
