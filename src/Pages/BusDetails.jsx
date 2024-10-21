@@ -2,13 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function BusDetails() {
   const location = useLocation();
-  const { name, description, type, price, imageUrl } = location.state;
+  const { name, description, type, price, imageUrl } = location.state.data;
+  const filter = location.state.filter;
 
   return (
     <div className="min-h-dvh flex flex-col bg-orange-100">
       <div className="flex-1 flex  flex-col pt-6 bg-orange-100  gap-4 px-4 sm:px-8 md:px-8 md:flex-row lg:px-20 ">
         <div>
-          <Link to=".." relative="path">
+          <Link to={`..?${filter}`} relative="path">
             <div className="ml-2 text-sm md:text-base mb-1 w-fit text-gray-800 italic hover:text-red-900 transition-all duration-1000 hover:scale-x-110 hover:-ml-1  ">
               {"<<"}Back
             </div>

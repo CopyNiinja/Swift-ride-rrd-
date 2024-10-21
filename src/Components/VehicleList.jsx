@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Vehicle from "./Vehicle";
 export default function VehicleList() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const fil = searchParams.toString();
   const vanFilter = searchParams.get("type") || null;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -70,7 +71,7 @@ export default function VehicleList() {
       </div>
       <div className="grid grid-cols-1 gap-2 mx-3 mb-4 rounded-sm sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:mx-10 ">
         {filteredVans.map((obj) => (
-          <Vehicle key={obj.id} data={obj} filer={vanFilter} />
+          <Vehicle key={obj.id} data={obj} filter={fil} />
         ))}
       </div>
     </>

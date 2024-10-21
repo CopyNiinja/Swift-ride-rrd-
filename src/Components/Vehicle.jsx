@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 export default function Vehicle({
   // eslint-disable-next-line react/prop-types
   data,
+  // eslint-disable-next-line react/prop-types
+  filter,
 }) {
   // eslint-disable-next-line react/prop-types
   const { imageUrl, name, price, type, id } = data;
   return (
-    <Link to={`${id}`} state={data}>
+    <Link to={`${id}`} state={{ data, filter }}>
       <div className="col-span-1 relative  text-sm rounded-md group duration-300 hover:rounded-md hover:border-2 hover:p-3 ">
         <img
           src={imageUrl}
