@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLoaderData, useSearchParams } from "react-router-dom";
 import Vehicle from "./Vehicle";
+
+export async function loader() {
+  const resp = await fetch("http://localhost:3000/microbuses");
+  return await resp.json();
+}
+
 export default function VehicleList() {
   const [searchParams, setSearchParams] = useSearchParams();
   const fil = searchParams.toString();
   const vanFilter = searchParams.get("type") || null;
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    fetch("http://localhost:3000/microbuses")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
+
+  const data = useLoaderData();
 
   const filteredVans = vanFilter
     ? data.filter((v) => v.type === vanFilter)
@@ -31,15 +27,13 @@ export default function VehicleList() {
     });
   };
   return (
-    <>
+    <div className="bg-gradient-to-b  from-orange-100 to-white    flex flex-col justify-between">
       <div>
         <h1 className="text-gray-700 italic pt-8 pb-2  font-hello font-bold text-xl md:text-2xl lg:text-3xl mx-3 md:mx-10  ">
           Discover Our Premium Buses:
         </h1>
-        {loading ? (
-          <h1 className="text-center">Loading...</h1>
-        ) : (
-          <div className="text-left mx-3 mb-1 md:mx-10 space-x-1 ">
+        {
+          <div className="text-left mx-3 mb-2 md:mx-10 space-x-1 ">
             <button
               className=" text-xs rounded-md px-2 py-1 bg-orange-500 text-white"
               onClick={() => handleParams("type", "simple")}
@@ -67,13 +61,13 @@ export default function VehicleList() {
               </button>
             )}
           </div>
-        )}
+        }
       </div>
       <div className="grid grid-cols-1 gap-2 mx-3 mb-4 rounded-sm sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:mx-10 ">
         {filteredVans.map((obj) => (
           <Vehicle key={obj.id} data={obj} filter={fil} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
